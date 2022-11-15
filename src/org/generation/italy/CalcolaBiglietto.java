@@ -37,11 +37,29 @@ public class CalcolaBiglietto {
 		
 		sc.close();
 		
-		double prezzoBigliettoStandard = (double) kmDaPercorrere * 0.21d;
+//		double prezzoBigliettoStandard = (double) kmDaPercorrere * 0.21d;
 //		System.out.println("Prezzo del biglietto standard: " + prezzoBigliettoStandard);
+		
+	//	bonus 2
+		double prezzoBigliettoStandard;
+		
+		if(kmDaPercorrere != 1) {			
+			prezzoBigliettoStandard = ((double) kmDaPercorrere * 0.21d) + ((kmDaPercorrere * 0.01));
+		} else {			
+			prezzoBigliettoStandard = (double) kmDaPercorrere * 0.21d;
+		}
+		
+	//  -------------------------
 		
 		
 		double sconto = 0;
+		
+	//	bonus 1
+		if(etaPasseggero < 12) {
+			System.out.println("Il biglietto per te è GRATIS");
+			return;
+		}
+	//  ----------------------------------------------------------
 		
 		if(etaPasseggero < 18) {
 			sconto = prezzoBigliettoStandard * 20 / 100;
@@ -52,7 +70,7 @@ public class CalcolaBiglietto {
 		
 		double prezzoFinaleBiglietto;
 		prezzoFinaleBiglietto = prezzoBigliettoStandard - sconto;
-		System.out.printf("Prezzo del biglietto al netto di sconti: " + prezzoFinaleBiglietto);
+		System.out.printf("Prezzo del biglietto al netto di sconti: %.2f", prezzoFinaleBiglietto);
 		
 		
 	}
