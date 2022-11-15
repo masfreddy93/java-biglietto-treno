@@ -37,17 +37,17 @@ public class CalcolaBiglietto {
 		
 		sc.close();
 		
-//		double prezzoBigliettoStandard = (double) kmDaPercorrere * 0.21d;
+		double prezzoBigliettoStandard = (double) kmDaPercorrere * 0.21d;
 //		System.out.println("Prezzo del biglietto standard: " + prezzoBigliettoStandard);
 		
 	//	bonus 2
-		double prezzoBigliettoStandard;
+//		double prezzoBigliettoStandard;
 		
-		if(kmDaPercorrere != 1) {			
-			prezzoBigliettoStandard = ((double) kmDaPercorrere * 0.21d) + ((kmDaPercorrere * 0.01));
-		} else {			
-			prezzoBigliettoStandard = (double) kmDaPercorrere * 0.21d;
-		}
+//		if(kmDaPercorrere != 1) {			
+////			prezzoBigliettoStandard = ((double) kmDaPercorrere * 0.21d) + ((kmDaPercorrere * 0.01));
+//		} else {			
+//			prezzoBigliettoStandard = (double) kmDaPercorrere * 0.21d;
+//		}
 		
 	//  -------------------------
 		
